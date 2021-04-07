@@ -1,7 +1,5 @@
 alabaster==0.7.12
 alembic==1.4.1
-anaconda-navigator==1.10.0
-anaconda-project==0.9.1
 anyio==2.2.0
 aplus==0.11.0
 appdirs==1.4.4
