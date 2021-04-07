@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> The Churn Model Prediction </title>
+</head>
+<body>
+<body style="background-color:powderblue;">
+	<center>
+	<b>The Churn Model Prediction </b><br></br><br></br>
+	</center>
+
+    <table>
+    <center>	
+	<form  method ="POST"  action="{{url_for('churn_home') }}" >		
+		<div class="form">
+		<label>CreditScore</label>
+		<input type="number" name="CreditScore" required=""><br></br>
+		<label>Geography</label>
+		<!--<input type="number" name="Geography", required=""><br></br>-->
+		<!-- <label>Gender</label>
+		<input type="number" name="Gender", required=""><br></br>-->
+		<select name="Geography" id="Geography">
+  			<option value="france">France</option>	
+			<option value="spain">Spain</option>
+			<option value="germany">Germany</option>
+		</select><br></br>
+		<label>Gender</label>
+		<select name="Gender" id="Gender">
+  			<option value="M">Male</option>	
+			<option value="F">Female</option>
+		</select><br></br>
+		<label>Age</label>
+		<input type="number" name="Age", required=""><br></br> 
+		<label>Tenure</label>
+		<input type="number" name="Tenure", required=""><br></br> 
+		<label>Balance</label>
+		<input type="text" name="Balance", required=""><br></br> 
+		<label>NumOfProducts</label>
+		<input type="number" name="NumOfProducts", required=""><br></br>
+		<label>HasCrCard</label>
+		<input type="number" name="HasCrCard", required=""><br></br>
+		<label>IsActiveMember</label>
+		<input type="number" name="IsActiveMember", required=""><br></br>
+		<label>EstimatedSalary</label>
+		<input type="text" name="EstimatedSalary", required=""><br></br>
+		
+         <button type="submit">Submit</button><br></br><br></br>
+
+      </center> 
+	</div>
+	
+	</form>
+	</table>
+
+	{%if score %}
+	{{score}}
+	{%endif%}
+	<style type="text/css">
+	label{
+display:inline-block;
+width:200px;
+margin-right:22px;
+text-align:right;
+}
+
+	
+fieldset{
+border:none;
+width:500px;
+margin:0px auto;
+}
+input, select {
+            width: 200px;
+            padding: 0;
+            margin: 0;
+            height: 22px;
+         }
+         input {
+            text-indent: 3px;
+         }
+
+</style>
+
+</body>
+</html>
